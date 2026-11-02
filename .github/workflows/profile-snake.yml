@@ -1,0 +1,37 @@
+name: Animate contribution graph
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    name: Generate animated contribution snake
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Draw the contribution graph
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: Jarv1s-stack
+          outputs: |
+            dist/github-snake.svg?color_snake=#047857&color_dots=#edf8f3,#b7efda,#63d3a7,#16a875,#047857
+            dist/github-snake-dark.svg?color_snake=#80ffd5&color_dots=#101c23,#123d3a,#087f68,#17b88a,#80ffd5
+
+      - name: Publish generated artwork to the output branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
