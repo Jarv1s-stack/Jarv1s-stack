@@ -8,11 +8,11 @@
   </p>
   <sub>Building useful products where software, AI, and thoughtful design meet.</sub>
   <br /><br />
-  <a href="#about">ABOUT</a> ·
-  <a href="#selected-builds">BUILDS</a> ·
-  <a href="#toolkit">TOOLKIT</a> ·
-  <a href="#contribution-signal">CONTRIBUTION SIGNAL</a> ·
-  <a href="#connect">CONNECT</a>
+  <a href="#01--about">ABOUT</a> ·
+  <a href="#02--selected-builds">BUILDS</a> ·
+  <a href="#03--toolkit">TOOLKIT</a> ·
+  <a href="#05--contribution-signal">CONTRIBUTION SIGNAL</a> ·
+  <a href="#06--connect">CONNECT</a>
 </div>
 
 ---
